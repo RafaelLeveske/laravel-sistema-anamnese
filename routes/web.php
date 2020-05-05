@@ -1,8 +1,8 @@
 <?php
 
 
-    Route::get('/session', 'SessionController@index');
-    Route::post('/session', 'SessionController@create');
+    Route::get('/', 'SessionController@index');
+    Route::post('/', 'SessionController@create');
 
     Route::get('/registro', 'RegistroController@create');
     Route::post('/registro', 'RegistroController@store');

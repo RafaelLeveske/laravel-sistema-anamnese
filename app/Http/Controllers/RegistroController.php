@@ -22,7 +22,7 @@ class RegistroController extends Controller
 
         Auth::login($user);
 
-        return redirect ('/session');
+        return redirect ('/');
 
     }
 }

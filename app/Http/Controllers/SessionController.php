@@ -14,8 +14,6 @@ class SessionController extends Controller
         if ( !Auth::attempt ($request->only(['email', 'password']))){
          return redirect()->back()->withErrors('E=Mail ou senha incorreto!');
         }
-       /* $paciente = User::find($request->id);
-        compact('paciente');*/
 
         return redirect ('/psicologo/index');
 
