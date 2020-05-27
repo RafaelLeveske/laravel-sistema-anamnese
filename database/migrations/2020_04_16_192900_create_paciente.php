@@ -16,13 +16,13 @@ class CreatePaciente extends Migration
         Schema::create('paciente', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome', 100);
-            $table->bigInteger('cpf');
+            $table->string('cpf');
             $table->string('nome_pai', 100);
             $table->string('nome_mae', 100);
             $table->date('data_nascimento');
-            $table->bigInteger('cep');
+            $table->string('cep');
             $table->string('endereco', 100);
-            $table->bigInteger('telefone');
+            $table->string('telefone');
             $table->string('uf', 2);
             $table->string('estado_civil', 20);
             $table->integer('psicologo_id');

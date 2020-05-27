@@ -12,7 +12,7 @@ class SessionController extends Controller
     public function create(Request $request){
 
         if ( !Auth::attempt ($request->only(['email', 'password']))){
-         return redirect()->back()->withErrors('E=Mail ou senha incorreto!');
+         return redirect()->back()->withErrors('E-Mail ou senha incorreto!');
         }
 
         return redirect ('/psicologo/index');

@@ -17,11 +17,8 @@ class CreateConsulta extends Migration
             $table->bigIncrements('id');
             $table->string('data_hora', 100);
             $table->longText('evolucao');
-
-            //$table->integer('psicologo_id');
             $table->integer('paciente_id');
 
-            //$table->foreign('psicologo_id')->references('id')->on('psicologo');
             $table->foreign('paciente_id')->references('id')->on('paciente');
         });
     }

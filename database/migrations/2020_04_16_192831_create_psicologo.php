@@ -16,8 +16,8 @@ class CreatePsicologo extends Migration
         Schema::create('psicologo', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome', 100);
-            $table->bigInteger('crp');
-            $table->bigInteger('cep');
+            $table->string('crp');
+            $table->string('cep');
             $table->string('endereco', 100);
             $table->string('uf', 2);
             $table->string('estado_civil', 20);

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Consulta;
+use App\Models\Consulta;
 use App\Http\Requests\PacienteFormRequest;
 use App\Paciente;
 use App\Psicologo;
@@ -139,7 +139,7 @@ class PacienteController extends Controller
 
         $request->session()->flash('mensagem', "Dados pessoais do paciente {$paciente->nome} ID:{$paciente->id} foram atualizados com sucesso.");
 
-        return redirect ('/paciente/index');
+        return redirect ('/psicologo/index');
 
     }
 
@@ -156,7 +156,7 @@ class PacienteController extends Controller
         //Paciente::destroy($request->id);
 
         $request->session()->flash('mensagem', "Paciente excluido com sucesso.");
-        return redirect ('/paciente/index');
+        return redirect ('/psicologo/index');
     }
 
 };

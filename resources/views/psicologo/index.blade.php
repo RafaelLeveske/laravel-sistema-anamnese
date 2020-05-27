@@ -90,13 +90,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="/psicologo/create">Cadastrar Novo Psicologo</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" title="Todas as Consultas" href="/consulta/index">Consultas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" title="Todos os Pacientes" href="/paciente/index">Pacientes</a>
-            </li>
-
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">

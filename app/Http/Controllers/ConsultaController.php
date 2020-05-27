@@ -44,7 +44,6 @@ class ConsultaController extends Controller
     {
         $data_hora = $request->nameDataHora;
         $evolucao = $request->nameEvolucao;
-        //$psicologo_id = $request->nameIdPsicologo;
         $paciente_id = $request->nameIdPaciente;
 
         $consulta = Paciente::find($request->id);
@@ -52,13 +51,12 @@ class ConsultaController extends Controller
         $consulta->consultas()->create([
             'data_hora' => $data_hora,
             'evolucao' => $evolucao,
-            //'psicologo_id' => $psicologo_id,
             'paciente_id'=>$paciente_id
         ]);
 
         $request->session()->flash('mensagem', "Consulta do paciente ID:{$consulta->id} nome: {$consulta->nome} incluido com sucesso.");
 
 
-        return redirect ('/consulta/index');
+        return redirect ('/psicologo/index');
     }
 }
